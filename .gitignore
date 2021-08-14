@@ -18,6 +18,8 @@
 .env.test.local
 .env.production.local
 
+key-api-movie.text
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
