@@ -1,8 +1,15 @@
 import React from "react";
-import { API_KEY } from "./config";
+
+// styles
+import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
-  return <div className="App">{API_KEY}</div>;
+  return (
+    <div className="App">
+      <GlobalStyle />
+      Start Here
+    </div>
+  );
 }
 
 export default App;
