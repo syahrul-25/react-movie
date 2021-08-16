@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 // Image
 import searhIcon from "../../images/search-icon.svg";
 // styles
@@ -33,6 +34,10 @@ const SearchBar = ({ setSearchTerm }) => {
       </Content>
     </Wrapper>
   );
+};
+
+SearchBar.propTypes = {
+  setSearhTerm: PropTypes.func,
 };
 
 export default SearchBar;
