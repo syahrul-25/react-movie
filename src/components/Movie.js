@@ -7,7 +7,7 @@ import Spinner from "./Spinner";
 import BreadCrumb from "./BreadCrumb";
 import MovieInfo from "./MovieInfo";
 import MovieInfoBar from "./MovieInfoBar";
-import Actor from "../Actor";
+import Actor from "./Actor";
 // Hook
 import { useMovieFetch } from "../hooks/useMovieFetch";
 
