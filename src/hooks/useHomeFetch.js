@@ -29,7 +29,7 @@ export const useHomeFetch = () => {
           page > 1 ? [...prev.results, ...movies.results] : [...movies.results],
       }));
     } catch (e) {
-      setError(false);
+      setError(true);
     }
     setLoading(false);
   };
