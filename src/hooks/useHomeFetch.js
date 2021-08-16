@@ -38,6 +38,6 @@ export const useHomeFetch = () => {
     setState(initialState);
     fetchMovies(1, searchTerm);
   }, [searchTerm]);
-
+  console.log(state);
   return { state, loading, error, setSearchTerm, searchTerm };
 };
