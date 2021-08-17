@@ -6,6 +6,7 @@
 .pnp.js
 /.netlify/
 
+
 # testing
 /coverage
 
@@ -24,3 +25,5 @@ key-api-movie.text
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env
