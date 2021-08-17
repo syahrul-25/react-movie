@@ -17,6 +17,6 @@ const HeroImage = ({ image, title, text }) => (
 HeroImage.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.stirng,
+  text: PropTypes.string,
 };
 export default HeroImage;
