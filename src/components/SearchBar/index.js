@@ -5,7 +5,7 @@ import searhIcon from "../../images/search-icon.svg";
 // styles
 import { Wrapper, Content } from "./SearchBar.style";
 
-const SearchBar = ({ setSearchTerm }) => {
+const SearchBar = ({ setSearchTerm, searchTerm }) => {
   const [state, setState] = useState("");
   const initial = useRef(true);
 
@@ -14,13 +14,21 @@ const SearchBar = ({ setSearchTerm }) => {
       initial.current = false;
       return;
     }
-
     const timer = setTimeout(() => {
       setSearchTerm(state);
     }, 500);
 
     return () => clearTimeout(timer);
   }, [setSearchTerm, state]);
+
+  useEffect(() => {
+    if (initial.current) {
+      initial.current = false;
+      return;
+    }
+
+    setState(searchTerm);
+  }, [setState, searchTerm]);
   return (
     <Wrapper>
       <Content>
@@ -28,7 +36,7 @@ const SearchBar = ({ setSearchTerm }) => {
         <input
           type="text"
           placeholder="Search Movie"
-          onChange={(event) => setState(event.currentTarget.value)}
+          onChange={(e) => setState(e.currentTarget.value)}
           value={state}
         />
       </Content>

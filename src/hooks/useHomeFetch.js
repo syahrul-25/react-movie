@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { atom, useRecoilState } from "recoil";
 // API
 import API from "../API";
 // helper
@@ -11,8 +12,13 @@ const initialState = {
   total_results: 0,
 };
 
+export const search = atom({
+  key: "search-key",
+  default: "",
+});
+
 export const useHomeFetch = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useRecoilState(search);
   const [state, setState] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
